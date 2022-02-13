@@ -1,0 +1,35 @@
+dotenv: .env
+dependencies:
+  - smartcontractkit/chainlink@1.1.0
+  - OpenZeppelin/openzeppelin-contracts@4.4.2
+compiler:
+  solc:
+    remappings:
+      - "@chainlink=smartcontractkit/chainlink@1.1.0"
+      - "@openzeppelin=OpenZeppelin/openzeppelin-contracts@4.4.2"
+wallets:
+  private_key: ${PRIVATE_KEY}
+networks:
+  default: development
+
+  development:
+    key_hash: "0x2ed0feb3e7fd2022120aa84fab1945545a9f2ffc9076fd6156fa96eaff4c1311"
+    fee: 0.1
+  
+  ganache-local:
+    key_hash: "0x2ed0feb3e7fd2022120aa84fab1945545a9f2ffc9076fd6156fa96eaff4c1311"
+    fee: 0.1
+
+  mainnet-fork-dev:
+    eth_usd_price_feed: "0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419"
+    link: "0x514910771AF9Ca656af840dff83E8264EcF986CA"
+    vrf: "0xf0d54349aDdcf704F77AE15b96510dEA15cb7952"
+    key_hash: "0xAA77729D3466CA35AE8D28B3BBAC7CC36A5031EFDC430821C02BC31A238AF445"
+    fee: 2
+
+  rinkeby:
+    eth_usd_price_feed: "0x8A753747A1Fa494EC906cE90E9f37563A8AF630e"
+    link: "0x01BE23585060835E02B77ef475b0Cc51aA1e0709"
+    vrf: "0xb3dCcb4Cf7a26f6cf6B120Cf5A73875B7BBc655B"
+    key_hash: "0x2ed0feb3e7fd2022120aa84fab1945545a9f2ffc9076fd6156fa96eaff4c1311"
+    fee: 0.1

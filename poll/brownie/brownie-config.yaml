@@ -1,0 +1,11 @@
+dotenv: .env
+# dependencies:
+#   - OpenZeppelin/openzeppelin-contracts@4.4.2
+# compiler:
+#   solc:
+#     remappings:
+#       - "@openzeppelin=OpenZeppelin/openzeppelin-contracts@4.4.2"
+wallets:
+  private_key: ${PRIVATE_KEY}
+networks:
+  default: development
